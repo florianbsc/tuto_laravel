@@ -13,9 +13,9 @@ class PostController extends Controller
             'articles' => Post::all()
         ]);
     }
-    public function show($id_post){
+    public function show(Post $post){
         return view('article', [
-            'article' => Post::find($id_post)
+            'article' => $post
         ]);
     }
 }
